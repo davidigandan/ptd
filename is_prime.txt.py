@@ -183,3 +183,10 @@ def is_prime(x):
                 print('%i is not a prime number. ' % x)
 
         print('%i is a prime number.' % x)
+
+import _thread as thread
+
+my_input = [2, 193, 323, 1327, 433785907]
+
+for x in my_input:
+   thread.start_new_thread(is_prime, (x,)) 
